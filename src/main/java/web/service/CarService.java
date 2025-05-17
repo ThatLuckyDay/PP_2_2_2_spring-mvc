@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 @Service
 public class CarService {
 
-    List<Car> carRepo = Stream
+    private final List<Car> carRepo = Stream
             .iterate(1, i -> i < 6, i -> ++i)
             .map(elem -> new Car("name" + elem, "number" + elem, 2000 + elem))
             .toList();
